@@ -1,4 +1,4 @@
-
+ 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -27,6 +27,7 @@ public class SampleDBOperation extends JdbcDaoSupport {
 			dataSource.setPassword("gpe123");
 			System.out.println("Data source configuration completed");
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 	}
