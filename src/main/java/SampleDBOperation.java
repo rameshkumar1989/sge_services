@@ -7,6 +7,7 @@ import com.sge.model.VendorModel;
 
 public class SampleDBOperation extends JdbcDaoSupport {
 
+
 	private static final DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	private static JdbcTemplate jdbcTemplate;
 
