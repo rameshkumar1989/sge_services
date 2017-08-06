@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link href="../build/css/style.css" rel="stylesheet">
+</head>        
+    <script>
+      $(document).ready(function() {
+$('input:text:first').focus();
+    
+$('input:text').bind("keydown", function(e) {
+   var n = $("input:text").length;
+   if (e.which == 13) 
+   { //Enter key
+     e.preventDefault(); //to skip default behavior of the enter key
+     var nextIndex = $('input:text').index(this) + 1;
+     if(nextIndex < n)
+       $('input:text')[nextIndex].focus();
+     else
+     {
+       $('input:text')[nextIndex-1].blur();
+       $('#btnSubmit').click();
+     }
+   }
+});
+
+$('#btnSubmit').click(function() {
+    alert('Form Submitted');
+});
+});
+      
+    </script>
+<body>
+    
+    <style>
+        body{
+            
+            margin:0px;
+            padding:0px;
+            color:#014464;
+      
+    </style>
+    
+    <div class="whole-container" style="border: 1px solid #014434; height:1250px;width:1066px;">
+        <div class="top-header" style="padding-bottom: 0px;">
+            <img src="images/logo.png">
+        <h1 class="purchase-h1">SRI GANAPATHY ENTERPRISES</h1>
+           
+           </div>
+           
+           <div class="material-tables">
+            <!--<h3>MATERIAL DELIVERY DETAILS</h3>-->
+            
+            <table class="mari-tables">
+                <tr>
+                    <td style="width: 14%;"><strong>PBook No: </strong></td>
+                    <td>33249</td>
+                    
+                    <td><strong>No of Load:</strong></td>
+                    <td style="width: 5%;">2</td>
+                    
+                    <td><strong>Total Amount:</strong></td>
+                    <td>46,500.00</td>
+                    
+                    <td><strong>Print Date:</strong></td>
+                    <td>01-04-2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Supplier Name:</strong></td>
+                    <td>SE SHUVARDHAN G</td>
+                    
+                    <td><strong></strong></td>
+                    <td></td>
+                    
+                    <td><strong></strong></td>
+                    <td></td>
+                    
+                    <td><strong></strong></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+            
+            <table class="second-material-tables">
+                <tr class="second-designs">
+                    <th>S No</th>
+                    <th>Purchase Date</th>
+                    <th>Customer Name - site</th>
+                    <th>Items</th>
+                    <th>Vehicle No</th>
+                    <th>LRY Dc No</th>
+                    <th>MRV No.</th>
+                    <th>Unit</th>
+                    <th>Pur.Qty</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+
+                </tr>
+                <tr>
+                    <td>100478</td>
+                    <td>29-03-2017</td>
+                    <td>UTGL - UNIT-II-PUDUPAKKAM</td>
+                    <td>VILUPURAN SAND</td>
+                    <td>TN20AJ0015</td>
+                    <td>110158</td>
+                    <td></td>
+                    <td>LOAD</td>
+                    <td>1</td>
+                    <td>22500.00</td>
+                    <td>22,500.00</td>
+                </tr>
+                <tr>
+                    <td>100478</td>
+                    <td>29-03-2017</td>
+                    <td>UTGL - UNIT-II-PUDUPAKKAM</td>
+                    <td>VILUPURAN SAND</td>
+                    <td>TN20AJ0015</td>
+                    <td>110158</td>
+                    <td></td>
+                    <td>LOAD</td>
+                    <td>1</td>
+                    <td>22500.00</td>
+                    <td>22,500.00</td>
+                </tr>
+                <tr style="border-top: 1px solid #000;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong>Total</strong></td>
+                    <td></td>
+                    <td><strong>2</strong></td>
+                    <td></td>
+                    <td><strong>46,500.00</strong></td>
+                </tr> 
+                 
+            </table>
+            
+           </div>
+            
+              
+             
+             
+              
+             
+             
+             
+             <div class="clear"></div>
+    </div>
+    
+   
+    
+</body>
+        
+</html>
